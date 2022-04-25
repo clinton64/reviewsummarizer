@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Document</title>
+
+  <style>
+    textarea {
+      overflow-y: scroll;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 30px;
+      padding: 10px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+    }
+
+
+    .scrollbar {
+
+      position: absolute;
+      width: 12px;
+      height: 333px;
+      left: 607px;
+      top: 164px;
+
+      background: #414E5E;
+      border: 1px solid #889AB5;
+      border-radius: 50px;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 333px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      /* box-shadow: inset 0 0 5px grey; */
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #414E5E;
+      border-radius: 50px;
+      border: 1px solid #9DACC1;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5C6979;
+    }
+
+
+
+
+    body {
+      background: #242E3B;
+
+    }
+
+    h1 {
+      position: relative;
+      width: 854px;
+      height: 44px;
+      /* left: 164px;
+      top: 82px; */
+
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14wv;
+      line-height: 41px;
+
+      color: #ffffff;
+      /* -webkit-text-stroke: 0.03vw rgb(255, 255, 255); */
+      text-transform: uppercase;
+      /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+      border: none;
+    }
+
+    /* h1::before {
+      position: absolute;
+      content: attr(data-text);
+      top: 0;
+      left: 0;
+      width: 20%;
+      height: 100%;
+      color: #FFFFFF;
+      -webkit-text-stroke: #ffffff;
+      border-right: 2px solid #ffffff;
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+
+    } */
+
+    /* @keyframes animate {
+
+      0%,
+      10%,
+      100% {
+        width: 0;
+      }
+
+      70%,
+      90% {
+        width: 100%;
+      }
+    } */
+
+    h2 {
+      width: 554px;
+      height: 44px;
+      /* left: 774px;
+      top: 82px; */
+
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 31px;
+      line-height: 41px;
+
+      color: #FFFFFF;
+
+      /* border: 1px solid #3F4648; */
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border: none;
+    }
+
+    h3 {
+      width: 630px;
+      height: 44px;
+      /* left: 768px;
+      top: 512px; */
+
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 41px;
+
+      color: #FFFFFF;
+      align-content: center;
+      /* border: 1px solid #3F4648; */
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .big-box {
+      width: 480px;
+      height: 530px;
+
+      top: 155px;
+
+      background: #2F3A49;
+      border: 3px solid #516175;
+      border-radius: 32px;
+    }
+
+    .small-box {
+
+      width: 581px;
+      height: 250px;
+      left: 757px;
+      top: 140px;
+
+      background: #2F3A49;
+      border: 3px solid #516175;
+      box-sizing: border-box;
+      border-radius: 32px;
+    }
+
+    button {
+      width: 150px;
+      height: 140px;
+      /* left: 477px;
+      top: 811px; */
+      margin-left: -100px;
+
+      background: #5C6979;
+      border: 1px solid #9DACC1;
+      box-sizing: border-box;
+      border-radius: 50%;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 30px;
+
+      color: #FFFFFF;
+      transition-duration: 0.4s;
+    }
+
+
+    button:hover {
+      background-color: #889AB5;
+      /* Green */
+      color: rgb(46, 50, 86);
+    }
+
+    ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    .container {
+      display: flex;
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* .container2 {
+      justify-content: left;
+
+    } */
+
+    .container-1 {
+      display: flex;
+
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .box-1 {
+      /* align-items: center; */
+
+      /* justify-content: center; */
+      flex: 1;
+      margin-left: 147px;
+      /* align-items: center;
+      justify-content: center; */
+      /* margin-left: 774px; */
+    }
+
+    .box-2 {
+      flex: 1;
+      align-items: flex-start;
+
+      /* justify-content: center; */
+
+    }
+
+    .box-2.summary {
+      display: flex;
+      align-items: flex-start;
+      /* justify-content: center; */
+    }
+
+    .extractive {
+      flex: 1;
+    }
+
+    .abstractive {
+      flex: 1;
+    }
+
+    .heading {
+      align-self: center;
+    }
+
+    img {
+
+      border-radius: 4px;
+      padding: 5px;
+      width: 80px;
+      height: 70px;
+      visibility: hidden;
+    }
+
+    .file-button {
+      visibility: hidden;
+      width: 100px;
+      height: 50px;
+
+      margin-left: 100px;
+      margin-top: -400px;
+
+      border-radius: 0%;
+      background: #5C6979;
+      border: 1px solid #9DACC1;
+      box-sizing: border-box;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: #FFFFFF;
+      transition-duration: 0.4s;
+
+    }
+  </style>
+
+
+
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="container2">
+      <!-- <h2 class="heading">Summarize Anything with our AI agent</h2> -->
+      <h1 class="heading">Summarize Food reviews with our AI Agent</h1>
+    </div>
+    <div class="container-1">
+      <!-- Page Container -->
+
+
+      <div class="box-1">
+        <div class="originaltext">
+
+          <h2>Original Text</h2>
+          <form action="/summary" method='POST'> {% csrf_token %}
+            <textarea name="review_text" class="big-box" placeholder="Copy and Paste your Text Here.">
+              {{originaltext}}
+            </textarea>
+            <button type="btn"> Summarize </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="box-2">
+        <div class="summary">
+          <div class="extractive">
+            <h3> Extractive Summary</h3>
+            <textarea class="small-box">
+              {{extractive}}
+            </textarea>
+          </div>
+          <div class="abstractive">
+            <h3>Abstractive Summary</h3>
+            <textarea class="small-box">
+              {{abstractive}}
+            </textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

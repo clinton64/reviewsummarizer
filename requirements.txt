@@ -1,0 +1,10 @@
+numpy
+pandas
+statistics
+nltk
+tensorflow
+sklearn
+bs4
+spacy
+lxml
+django
